@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Pomodoro</title>
     <meta name="description" content="Pomodoro project for the Odin Project">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -14,30 +14,28 @@
     <div id="h1-container" class="flex-center">
       <h1>Pomodoro timer</h1>
     </div>
-    <div id="main-container" class="flex-center">
+    <div id="main-container">
       <div id="pomodoro-container" class="flex-center">
-        <div id="reset" class="flex-center">
-          <ion-icon name="refresh"></ion-icon>
-        </div>
         <div id="timers-container">
           <div class="container">
-            <div class="timer-controls-up"><ion-icon name="chevron-up"></ion-icon></div>
+            <button class="timer-controls-up" value="work-time-up"><ion-icon name="chevron-up"></ion-icon></button>
             <p id="work-time">25</p>
-            <div class="timer-controls-down"><ion-icon name="chevron-down"></ion-icon></div>
+            <button class="timer-controls-down" value="work-time-down"><ion-icon name="chevron-down"></ion-icon></button>
           </div>
           <div class="container">
             <p id="display">25:00</p>
           </div>
           <div class="container">
-            <div class="timer-controls-up"><ion-icon name="chevron-up"></ion-icon></div>
+            <button class="timer-controls-up" value="rest-time-up"><ion-icon name="chevron-up"></ion-icon></button>
             <p id="rest-time">5</p>
-            <div class="timer-controls-down"><ion-icon name="chevron-down"></ion-icon></div>
+            <button class="timer-controls-down" value="rest-time-down"><ion-icon name="chevron-down"></ion-icon></button>
           </div>
         </div>
         <div id="controls-container" class="flex-center">
-          <div class="media-controls"><ion-icon name="play"></ion-icon></div>
-          <div class="media-controls"><ion-icon name="pause"></ion-icon></div>
-          <div class="media-controls"><ion-icon name="stop"></ion-icon></div>
+          <button class="media-controls" value="play"><ion-icon name="play"></ion-icon></button>
+          <button class="media-controls" value="pause"><ion-icon name="pause"></ion-icon></button>
+          <button class="media-controls" value="stop"><ion-icon name="stop"></ion-icon></button>
+          <button id="reset"><ion-icon name="refresh"></ion-icon></button>
         </div>
       </div>
     </div>
