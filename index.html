@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <meta name="description" content="Pomodoro project for the Odin Project">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body>
+    <div id="h1-container" class="flex-center">
+      <h1>Pomodoro timer</h1>
+    </div>
+    <div id="main-container" class="flex-center">
+      <div id="pomodoro-container" class="flex-center">
+        <div id="reset" class="flex-center">
+          <ion-icon name="refresh"></ion-icon>
+        </div>
+        <div id="timers-container">
+          <div class="container">
+            <div class="timer-controls-up"><ion-icon name="chevron-up"></ion-icon></div>
+            <p id="work-time">25</p>
+            <div class="timer-controls-down"><ion-icon name="chevron-down"></ion-icon></div>
+          </div>
+          <div class="container">
+            <p id="display">25:00</p>
+          </div>
+          <div class="container">
+            <div class="timer-controls-up"><ion-icon name="chevron-up"></ion-icon></div>
+            <p id="rest-time">5</p>
+            <div class="timer-controls-down"><ion-icon name="chevron-down"></ion-icon></div>
+          </div>
+        </div>
+        <div id="controls-container" class="flex-center">
+          <div class="media-controls"><ion-icon name="play"></ion-icon></div>
+          <div class="media-controls"><ion-icon name="pause"></ion-icon></div>
+          <div class="media-controls"><ion-icon name="stop"></ion-icon></div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

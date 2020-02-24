@@ -1,0 +1,87 @@
+body{
+  background-color: #98d684;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#h1-container{
+  height: 20vh;
+  align-items: flex-end;
+}
+
+h1{
+  font-size: 60px;
+  font-weight: bold;
+}
+
+#main-container{
+  height: 50vh;
+  flex-direction: column;
+}
+
+#pomodoro-container{
+  flex-direction: column;
+  width: 20vw;
+  height: 30vh;
+  min-width: 350px;
+  min-height: 250px;
+  background-color: #d8453f;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+#timers-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5% 0;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container p{
+  font-size: 30px;
+}
+
+#display{
+  font-size: 60px;
+}
+
+#controls-container{
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+ion-icon{
+  font-size: 30px;
+}
+
+#reset:hover{
+  transform: rotate(360deg); 
+  transition: .7s;
+  cursor: pointer;
+}
+
+.timer-controls-up:hover{
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.timer-controls-down:hover{
+  transform: translateY(5px);
+  cursor: pointer;
+}
+
+.media-controls:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
