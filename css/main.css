@@ -10,7 +10,7 @@ body{
 
 #h1-container{
   height: 20vh;
-  align-items: flex-end;
+  align-items: center;
 }
 
 h1{
@@ -23,13 +23,17 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10vh;
+}
+
+#timer-type-display{
+  font-size: 30px;
 }
 
 #pomodoro-container{
   flex-direction: column;
   width: 20vw;
   height: 30vh;
+  margin-top: 10vh;
   min-width: 350px;
   min-height: 250px;
   background-color: #d8453f;

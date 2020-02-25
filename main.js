@@ -1,3 +1,4 @@
+const timerTypeDisplay = document.getElementById("timer-type-display");
 const timerControls = document.querySelectorAll(".timer-controls");
 const workTime = document.getElementById("work-time");
 const display = document.getElementById("display");
@@ -100,9 +101,11 @@ let timer = new timers(function(){
 
   if (timer.totalSeconds === 0 && !isRestTime){
     isRestTime = true;
+    timerTypeDisplay.innerText = "Time to Rest";
     timer.start(restTimeSelected * 60)
   }else if (timer.totalSeconds === 0 && isRestTime){
     isRestTime = false;
+    timerTypeDisplay.innerText = "Time to Work";
     timer.start(workTimeSelected * 60);
   }
 }, 1000);
