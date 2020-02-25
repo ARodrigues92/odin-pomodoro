@@ -74,17 +74,21 @@ button{
   outline: none;
 }
 
-.timer-controls-up:hover{
+.timer-controls{
+  cursor: pointer;
+}
+
+.up:hover{
   transform: translateY(-5px);
   cursor: pointer;
 }
 
-.timer-controls-down:hover{
+.down:hover{
   transform: translateY(5px);
   cursor: pointer;
 }
 
-.media-controls:hover{
+.media-buttons:hover{
   transform: scale(1.2);
   cursor: pointer;
 }
