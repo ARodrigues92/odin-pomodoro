@@ -52,7 +52,7 @@ mediaControls.forEach ((button) => {
 function play(minutes){
   if (!paused && !isStarted){
     isStarted = true;
-    timer.start(workTimeSelected  * 60);
+    timer.start(workTimeSelected * 60);
   }else if (paused){
     timer.start(timer.totalSeconds);
   }
@@ -60,6 +60,8 @@ function play(minutes){
 
 function stop(){
   paused = false;
+  isRestTime = false;
+  isStarted = false;
   workTime.innerText = workTimeSelected;
   display.innerText = workTimeSelected + ":00";
   restTime.innerText = restTimeSelected;
@@ -67,11 +69,15 @@ function stop(){
 }
 
 function reset (){
+  paused = false;
+  isRestTime = false;
+  isStarted = false;
   workTimeSelected = 25;
   restTimeSelected = 5;
   workTime.innerText = workTimeSelected;
   display.innerText = workTimeSelected + ":00";
   restTime.innerText = restTimeSelected;
+  timer.stop();
 }
 
 function timers (callback, delay){
