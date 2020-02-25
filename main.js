@@ -69,15 +69,9 @@ function stop(){
 }
 
 function reset (){
-  paused = false;
-  isRestTime = false;
-  isStarted = false;
   workTimeSelected = 25;
   restTimeSelected = 5;
-  workTime.innerText = workTimeSelected;
-  display.innerText = workTimeSelected + ":00";
-  restTime.innerText = restTimeSelected;
-  timer.stop();
+  stop();
 }
 
 function timers (callback, delay){
