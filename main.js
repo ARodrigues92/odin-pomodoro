@@ -15,22 +15,30 @@ let isStarted = false;
 timerControls.forEach ((button) => {
   button.addEventListener ("click", () => {
     if (button.value === "work-time-up"){
-      workTimeSelected++;
-      workTime.innerText = workTimeSelected;
-      display.innerText = workTimeSelected + ":00";
-    }else if (button.value === "rest-time-up"){
-      restTimeSelected++;
-      restTime.innerText = restTimeSelected;
-    }else if (button.value === "work-time-down"){
-      if (workTimeSelected > 0){
-        workTimeSelected--;
+      if(!isStarted){
+        workTimeSelected++;
         workTime.innerText = workTimeSelected;
         display.innerText = workTimeSelected + ":00";
       }
-    }else if (button.value === "rest-time-down"){
-      if (restTimeSelected > 0){
-        restTimeSelected--;
+    }else if (button.value === "rest-time-up"){
+      if(!isStarted){
+        restTimeSelected++;
         restTime.innerText = restTimeSelected;
+      }
+    }else if (button.value === "work-time-down"){
+      if(!isStarted){
+        if (workTimeSelected > 0){
+          workTimeSelected--;
+          workTime.innerText = workTimeSelected;
+          display.innerText = workTimeSelected + ":00";
+        }
+      }
+    }else if (button.value === "rest-time-down"){
+      if(!isStarted){
+        if (restTimeSelected > 0){
+          restTimeSelected--;
+          restTime.innerText = restTimeSelected;
+        }
       }
     }
   });
