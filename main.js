@@ -4,6 +4,7 @@ const workTime = document.getElementById("work-time");
 const display = document.getElementById("display");
 const restTime = document.getElementById("rest-time");
 const mediaControls = document.querySelectorAll(".media-controls");
+const alarm = new Audio ("sounds/alarm-clock.wav");
 
 let workTimeSelected = workTime.innerText;
 let restTimeSelected = restTime.innerText;
@@ -93,7 +94,7 @@ function timers (callback, delay){
   }
 };
 
-let timer = new timers(function(){
+let timer = new timers( () => {
   timer.totalSeconds--;
   let minutes = Math.floor (timer.totalSeconds / 60);
   let seconds = timer.totalSeconds - (minutes * 60);
@@ -101,13 +102,20 @@ let timer = new timers(function(){
 
   if (timer.totalSeconds === 0 && !isRestTime){
     isRestTime = true;
-    timerTypeDisplay.innerText = "Time to Rest";
-    timer.start(restTimeSelected * 60)
+    changeTimer ("Time to Rest", restTimeSelected * 60);
   }else if (timer.totalSeconds === 0 && isRestTime){
     isRestTime = false;
-    timerTypeDisplay.innerText = "Time to Work";
-    timer.start(workTimeSelected * 60);
+    changeTimer ("Time to Work", workTimeSelected * 60);
   }
 }, 1000);
 
+
+function changeTimer (displayMessage, time){
+  alarm.play();
+  timer.stop();
+  setTimeout ( () => {
+    timerTypeDisplay.innerText = displayMessage;
+    timer.start(time);
+  },5000);
+}
 

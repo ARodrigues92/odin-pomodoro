@@ -10,7 +10,7 @@ body{
 
 #h1-container{
   height: 20vh;
-  align-items: center;
+  align-items: flex-end;
 }
 
 h1{
