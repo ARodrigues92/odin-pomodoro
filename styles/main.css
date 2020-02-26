@@ -25,6 +25,10 @@ h1{
   align-items: center;
 }
 
+#timer-type-container{
+  height: 30px;
+}
+
 #timer-type-display{
   font-size: 30px;
 }

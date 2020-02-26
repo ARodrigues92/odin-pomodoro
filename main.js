@@ -39,6 +39,7 @@ timerControls.forEach ((button) => {
 mediaControls.forEach ((button) => {
   button.addEventListener ("click", () => {
     if (button.value === "play"){
+      timerTypeDisplay.innerText = "Time to work";
       play(workTimeSelected);
     }else if (button.value === "pause"){
       timer.pause();
@@ -63,6 +64,7 @@ function stop(){
   paused = false;
   isRestTime = false;
   isStarted = false;
+  timerTypeDisplay.innerText = "";
   workTime.innerText = workTimeSelected;
   display.innerText = workTimeSelected + ":00";
   restTime.innerText = restTimeSelected;
