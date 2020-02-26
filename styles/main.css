@@ -76,12 +76,6 @@ ion-icon{
   font-size: 30px;
 }
 
-button{
-  background: none;
-  border: none;
-  outline: none;
-}
-
 .timer-controls{
   cursor: pointer;
 }
